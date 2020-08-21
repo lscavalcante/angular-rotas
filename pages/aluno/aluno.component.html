@@ -1,0 +1,32 @@
+<div class="container">
+
+
+    <div class="jumbotron">
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <li class="list-group-item active">Alunos</li>
+                    </div>
+                    <div class="col-md-4">
+                        <button (click)="novo()" class="btn btn-primary m-2 pl-4 pr-4">Novo</button>
+                    </div>
+                </div>
+                <ul class="list-group" *ngFor="let aluno of alunos">
+                    <!-- <li routerLink="/aluno-detalhe" (click)="editar(aluno)" class="list-group-item">{{ aluno.nome }} - {{ aluno.email }}</li> -->
+                    <li (click)="editar(aluno)" class="list-group-item">{{ aluno.nome }} - {{ aluno.email }}</li>
+                </ul>
+
+            </div>
+
+            <div class="col-6">
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
+
+    </div>
+</div>
